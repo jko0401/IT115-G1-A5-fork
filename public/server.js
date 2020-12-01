@@ -4,12 +4,12 @@ const port = 8080;
 
 app.use(express.static('public'));
 
-/*app.get('/', (req, res) => {
-   res.sendFile('/index.html', { root: __dirname });
+app.get('/', (req, res) => {
+   res.sendFile('./public/index.html', { root: __dirname });
 });
 
-app.get('/public/script.js', function(req, res) {
-    res.sendFile(path.join(__dirname + '/script.js'));
+app.get('/script.js', function(req, res) {
+    res.sendFile('./public/script.js', { root: __dirname });
 });
-*/
+
 app.listen(port, () => console.log(`listening on port ${port}!`));
