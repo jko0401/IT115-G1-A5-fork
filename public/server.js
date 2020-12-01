@@ -5,10 +5,10 @@ const port = 8080;
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
-   res.sendFile('./index.html', { root: __dirname });
+   res.sendFile('/index.html', { root: __dirname });
 });
 
-app.get('./public/script.js', function(req, res) {
+app.get('/public/script.js', function(req, res) {
     res.sendFile(path.join(__dirname + '/script.js'));
 });
 
