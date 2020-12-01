@@ -8,4 +8,8 @@ app.get('/', (req, res) => {
    res.sendFile('./index.html', { root: __dirname });
 });
 
+app.get('./public/script.js', function(req, res) {
+    res.sendFile(path.join(__dirname + '/script.js'));
+});
+
 app.listen(port, () => console.log(`listening on port ${port}!`));
